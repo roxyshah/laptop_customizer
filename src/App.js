@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import FeatureList from './FeatureList/FeatureList';
 import Cart from './Cart/Cart';
-import CartItem from './CartItem/CartItem';
 import './App.css';
 
 // This object will allow us to
@@ -51,8 +50,11 @@ class App extends Component {
           <FeatureList 
               features={ this.props.features }
               selected={ this.state.selected }
-              updateFeatureCallback={ this.updateFeature } />
-          <Cart selected={ this.state.selected } />
+              updateFeatureCallback={ this.updateFeature }
+              USCurrencyFormat={ USCurrencyFormat } />
+          <Cart 
+            selected={ this.state.selected }
+            USCurrencyFormat={ USCurrencyFormat } />
         </main>
       </div>
     );
